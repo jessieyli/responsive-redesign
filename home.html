@@ -1,14 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="index.css" />
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
-    <!-- TODO: put your HTML code here! -->
+    <div class="container">
+      <h1>Responsive Redesign</h1>
+      <h3>Part 1: Identifying Usability Problems</h3>
+      <p>
+        This project focuses on redesigning the website for No. 1 Boba Tea, a
+        local boba tea store in Las Vegas. When first visiting the website, I
+        noticed that most of the parts were functional and that they are able to
+        get their points across in presenting their menu, locations, and
+        providing background about the store. However, upon further analysis, I
+        was able to find a few areas for improvement, which mainly focus on
+        making the site
+        <b>more user friendly</b>, making elements <b>more intuitive</b>, and
+        simplifying the structure so that information is more readable and
+        <b>more logically grouped</b>.
+      </p>
+      <div class="images">
+        <img src="assets/originalwnotes.png" width="50%" />
+
+      </div>
+      <p>
+        A few problems are described in more detail below and annotated in the
+        screenshot:
+      </p>
+      <ul>
+        <li>
+          (1) the menu for different sections is below a lot of other
+          information, and you have to scroll up to reach the primary navigation
+          bar
+        </li>
+        <li>(1) tons of menu options makes it overwhelming and cluttered</li>
+        <li>
+          (1) font size doesn’t really make sense: menu options are really tiny
+          in comparison to the other site content
+        </li>
+        <li>
+          (2) the colors of the buttons seem random and don’t have special
+          meaning (green, white, red [may have unintended connotations towards
+          the Italian flag], and blue on hover)
+        </li>
+        <li>
+          (3) large section with no obvious and significant meaning (“the art of
+          tea”)
+        </li>
+        <li>
+          (4) gallery on first glance isn’t intuitive about switching images (no
+          buttons or arrows)
+          <ul>
+            <li>
+              hardly any obvious color contrast between currently active image
+              and other images
+            </li>
+          </ul>
+        </li>
+        <li>
+          (5) phone numbers and locations are all in one large clump so it’s
+          hard to tell which phone number is with which location
+        </li>
+        <li>
+          (5) “order now” is bolded, which suggests a clickable link that’s not
+          there
+        </li>
+        <li>
+          grouping and hierarchy doesn’t really make sense in a few places
+          <ul>
+            <li>
+              (6) map icon links to one specific location that doesn’t match the
+              main address on the webpage and is grouped with the other social
+              media icons
+            </li>
+            <li>
+              (6) two contact options are listed on the left, which overlaps
+              with the social media links on the bottom
+            </li>
+            <li>
+              (7) commendations and awards are on opposite ends of the page (one
+              on the top and one on the bottom)
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        When analyzing the site’s accessibility, I found that in terms of visual
+        styles, there weren’t any glaring concerns except for the fact that the
+        contrast of the black text on red was pretty low. With the WebAIM WAVE
+        tool, I noticed that although the website includes alt tags for their
+        images, they aren’t always descriptive (ex: “Resized 4 OTS.jpg” for
+        their logo). When using the screen reader, I found that there were 5
+        different elements to go through before reaching their main navigation
+        and in the navigation bar, between “menu” and “pick and brew tea”, there
+        were 9 sub elements of “menu” that we had to navigate through. As such,
+        in my redesign, I want to prioritize being able to navigate directly to
+        the main navigation bar and making descriptions more clear.
+      </p>
+    </div>
+    <div class="container">
+      <h3>Part 2: Visual Redesign</h3>
+      <h5>Lo-fi Wireframes</h5>
+      <p>
+        Based on the usability problems identified in part 1, I first created
+        some mockups for my redesign. I tried to focus on keeping as many of the
+        original elements as possible while making the interface more intuitive
+        with better hierarchy and less clutter. In these lo-fi wireframes of 3
+        different devices, I’ve annotated the sections that have been
+        re-designed with the numbers associated with their identified problems
+        in part 1. 
+      </p>
+      <div class="images">
+        <img src="assets/lofi1.png" width="60%">
+        <img src="assets/lofi2.png" width="40%">
+        <img src="assets/lofi3.png" width="40%">
+      </div>
+      
+      <p>
+        Below is some more detail about my decisions and how they
+        address the previously identified problems:
+      </p>
+      <ol>
+        <li>
+          In order to increase efficiency and usability, I moved the site’s
+          navigation bar to the top. This allows a <b>more consistent theme</b> for the
+          rest of the pages in the website as well because the navigation bar
+          will always be at the top and there won’t be any other extra
+          information above it. This mockup also keeps the navigation bar fixed
+          at the top which makes it <b>easy to access</b> while browsing the site. I
+          also renamed some of the sections and cut down the overall number,
+          which makes the point of each section more clear and increases
+          readability. In the mobile version, the menu is collapsed into a
+          clickable button to prevent clutter and increase space efficiency.
+        </li>
+        <li>
+          In the original website, the different colored buttons for ordering
+          feels a bit overwhelming and has unintended connotations. In my
+          wireframe, they were combined into a single “Order Online” button in
+          the upper right, which makes the interface more standard and more
+          learnable while still drawing attention to the option. Moving the
+          order button here should also increase visual contrast and draw
+          attention without using distracting colors. In the mobile version,
+          this feature is inside the menu.
+        </li>
+        <li>
+          While it was difficult to discern the meaning of this section in the
+          original website, I decided to keep it and combine it with the “new
+          drink” image to create a gallery. This creates a more centralized spot
+          for announcements and banner advertisements. It’ll also allow the
+          website to stay more consistent even if the images and content change,
+          increasing memorability.
+        </li>
+        <li>
+          In the original website, it’s difficult to tell what the images in the
+          gallery are and how to navigate the gallery. In the redesign, I added
+          arrows to promote more intuitive controls. The arrows are added on top
+          of the image to minimize unnecessary white space, especially for the
+          mobile and tablet versions.
+        </li>
+        <li>
+          The original website lists all the locations and phone numbers in one
+          long column, where the phone number is followed by the location. I
+          grouped together each location with its phone number and added a bit
+          of extra whitespace in between each location to create a grid that
+          encourages better readability and keeps this section distinct from
+          other information. I also took out the bold styling in “Call Us to
+          Order” in order to prevent misinterpretations of a clickable link.
+        </li>
+        <li>
+          Here, I ended up taking out the maps icon because it contained
+          information repeated in the “Locations” section of the webpage. and
+          didn’t want to direct people to one specific location. The icons were
+          also changed to reflect a more updated and well-maintained interface.
+          I also moved the Facebook and email sections here to group similar
+          elements and create a hierarchy that emphasizes calling and ordering
+          over emailing and social media.
+        </li>
+        <li>
+          Finally, since I took out the “Reviews” section from the navigation
+          bar, I combined it with the two comemndations and awards that the shop
+          wanted to display. This way, similar information is grouped, which
+          also makes it easier to process.
+        </li>
+      </ol>
+
+      <h5>Hifi Prototyping</h5>
+      <div class="images">
+        <img src="assets/hifi1.png">
+        <img src="assets/hifi2.png">
+        <img src="assets/hifi3.png">
+        <img src="assets/A4 - 1.png">
+      </div>
+      
+    </div>
+    <div class="container">
+      <h3>Responsive Redesign</h3>
+    </div>
   </body>
 </html>
